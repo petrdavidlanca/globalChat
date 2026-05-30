@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="chat-container">
+        
+        <header>
+            <div class="header-top">
+                <div class="header-title">
+                    <h1>Global Chat</h1>
+                    <span id="user-count">🟢 0 Online</span>
+                </div>
+                <div class="header-controls">
+                    <label class="system-toggle">
+                        <input type="checkbox" id="toggle-timestamps" checked>
+                        Timestamps
+                    </label>
+                    <label class="system-toggle">
+                        <input type="checkbox" id="toggle-system" checked>
+                        System Messages
+                    </label>
+                </div>
+            </div>
+            <p id="connection-status">Connecting...</p>
+        </header>
+
+        <div id="chat-box" class="chat-box"></div>
+
+        <form id="chat-form" class="input-area">
+            <input 
+                type="text" 
+                id="message-input" 
+                placeholder="Type a message..." 
+                autocomplete="off" 
+                required
+            >
+            <button type="submit" id="send-button">
+                Send
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </form>
+
+    </main>
+
+    <script src="client.js"></script>
+</body>
+</html>
