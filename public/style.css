@@ -60,6 +60,8 @@ header {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .header-title {
@@ -102,6 +104,7 @@ header h1 {
     gap: 8px;
     cursor: pointer;
     user-select: none;
+    white-space: nowrap;
 }
 
 .system-toggle input[type="checkbox"] {
@@ -230,4 +233,22 @@ header h1 {
     color: var(--text-muted);
     font-style: italic;
     margin: 0;
+}
+
+@media (max-width: 600px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5rem; 
+        margin-bottom: 5px;
+    }
+
+    .header-controls {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
 }
