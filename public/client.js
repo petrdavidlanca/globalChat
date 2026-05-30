@@ -9,7 +9,14 @@ const UI = {
     sendButton: document.getElementById('send-button')
 };
 
-const socket = new WebSocket('ws://localhost:3000');
+// Ask the browser if we are on a secure connection
+const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+
+// Grab the current domain (e.g., localhost:3000 or m9xl.onrender.com)
+const wsHost = window.location.host;
+
+// Connect dynamically!
+const socket = new WebSocket(`${wsProtocol}//${wsHost}`);
 
 const getColorFromName = (name) => {
     let hash = 0;
