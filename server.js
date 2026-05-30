@@ -79,12 +79,10 @@ const handleDisconnection = (ws, username) => {
     clients.delete(ws);
     broadcastUserCount();
     broadcast({ type: 'system', text: `${username} disconnected.` });
-    console.log(`${username} disconnected. Users online: ${clients.size}`);
 };
 
 wss.on('connection', (ws) => {
     const username = handleNewConnection(ws);
-    console.log(`${username} connected. Users online: ${clients.size}`);
 
     ws.on('message', (rawData) => handleIncomingMessage(ws, rawData));
     ws.on('close', () => handleDisconnection(ws, username));
