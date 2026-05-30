@@ -210,7 +210,6 @@ header h1 {
 
 .timestamp {
     color: var(--text-timestamp);
-    font-family: 'Fira Code', 'Courier New', Courier, monospace;
     font-size: 0.8rem;
     margin-right: 4px;
     font-style: normal;
@@ -219,6 +218,12 @@ header h1 {
 .username {
     font-weight: bold;
     color: var(--text-username);
+}
+
+.text {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
 }
 
 .system {

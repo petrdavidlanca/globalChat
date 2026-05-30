@@ -59,7 +59,7 @@ const handleIncomingMessage = (ws, rawData) => {
             const msgObj = {
                 type: 'chat',
                 username: author,
-                text: messageData.text,
+                text: String(messageData.text).substring(0, 250),
                 timestamp: Date.now()
             };
 
