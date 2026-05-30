@@ -87,7 +87,7 @@ const handleServerMessage = {
         renderSystemMessage(data.text);
     },
     userCount: (data) => {
-        UI.userCount.innerText = `$ {data.count} Online`;
+        UI.userCount.innerText = ` ${data.count} Online`;
     }
 };
 
